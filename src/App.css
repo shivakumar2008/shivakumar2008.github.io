@@ -2,6 +2,24 @@
   text-align: center;
 }
 
+.App-body {
+  text-align: left;
+}
+
+.footer-social-icons{
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.footer-social-icons li {
+  margin: 5px;
+}
+
+.footer-social-icons a img{
+  height: 40px;
+  width: 40px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,7 +33,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;

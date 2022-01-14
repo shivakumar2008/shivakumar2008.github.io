@@ -8,7 +8,7 @@ function App() {
   const lapsedTime = parseDuration(duration);
 
   return (
-    <div className="App">
+    <body className="App">
       <header className="App-header">
           <h1>Shiv Kumar Chintapalli</h1>
           <p>Exploring things for <b><em>{lapsedTime.years} years, {lapsedTime.months} months, {lapsedTime.days} days. </em></b>
@@ -16,26 +16,36 @@ function App() {
           </p>
       </header>
       <main className = "App-body">
-        <p>My Powers: </p>
+        <section id="skills">
+        <p>Primary Powers: </p>
           <ul>
             <li>Spring boot</li>
             <li>Vaadin</li>
+            <li>Jasper</li>
+          </ul>
+          <p>Secondary Powers: </p>
+          <ul>
+            <li>AI/ML</li>
             <li>ReactJs</li>
           </ul>
-
+        </section>
+       
+        <section id="learning">
           <p>I am trying to learn:</p>
           <ul>
             <li>AWS</li>
             <li>Angular</li>
             <li>Containerization</li>
           </ul>
-
+        </section>
+        <section id = "hobbies">
           <p>My Hobbies</p>
           <ul>
             <li>Travelling</li>
             <li>Googleing</li>
             <li>Reading, not books</li>
           </ul>
+          </section>
       </main>
       <footer>
         <ul className="footer-social-icons">
@@ -43,7 +53,7 @@ function App() {
           <li><a href="https://github.com/shivakumar2008" rel="noreferrer noopener" target="_blank"><img src={github} alt="github redirect"/></a></li>
         </ul>
       </footer>
-    </div>
+    </body>
   );
 }
 

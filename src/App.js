@@ -4,72 +4,80 @@ import './App.css';
 
 function App() {
 
-  const duration = new Date(2014, 6, 10) - new Date();
+  const duration = new Date() - new Date(2014, 6, 10);
   const lapsedTime = parseDuration(duration);
 
   return (
-    <body className="App">
+    <div className="App">
+      <div className="sticky-header">Under Construction... More, more things to come</div>
       <header className="App-header">
-          <h1>Shiv Kumar Chintapalli</h1>
-          <p>Exploring things for <b><em>{lapsedTime.years} years, {lapsedTime.months} months, {lapsedTime.days} days. </em></b>
-            I am an enthusiast, everything about tech and nature excites me. Although there is a lot to keep in my mind, I just keep the references... <em>small memory</em>.
-          </p>
+        <h1>Shiv Kumar Chintapalli</h1>
+        <p>Exploring things for <b><em>{lapsedTime.years} years, {lapsedTime.months} months and {lapsedTime.days} days approx. </em></b>
+          I am an enthusiast, everything about tech and nature excites me. Although there is a lot to keep in mind, I just keep the references... <em>small memory</em>.
+        </p>
       </header>
-      <main className = "App-body">
+      <main className="App-body">
         <section id="skills">
-        <p>Primary Powers: </p>
-          <ul>
-            <li>Spring boot</li>
-            <li>Vaadin</li>
-            <li>Jasper</li>
-          </ul>
-          <p>Secondary Powers: </p>
-          <ul>
-            <li>AI/ML</li>
-            <li>ReactJs</li>
-          </ul>
+          <div className="main-layout-block" id="left-up">
+            <p>Powers which I used the most</p>
+            <ul>
+              <li>Spring boot</li>
+              <li>Vaadin</li>
+              <li>Jasper</li>
+            </ul>
+          </div>
+          <div className="main-layout-block right-align" id="right-up">
+            <p>Powers sparsely used</p>
+            <ul>
+              <li>AI/ML</li>
+              <li>Microservices</li>
+              <li>ReactJs</li>
+            </ul>
+          </div>
         </section>
-       
+
         <section id="learning">
-          <p>I am trying to learn:</p>
-          <ul>
-            <li>AWS</li>
-            <li>Angular</li>
-            <li>Containerization</li>
-          </ul>
+          <div className="main-layout-block" id="left-down">
+            <p>Learning how to use these powers</p>
+            <ul>
+              <li>Angular</li>
+              <li>Cloud</li>
+              <li>Devops</li>
+            </ul>
+          </div>
+          <div className="main-layout-block right-align" id="right-down">
+            <p>My Hobbies, when I am not using powers</p>
+            <ul>
+              <li>Travelling</li>
+              <li>Googleing</li>
+              <li>Reading, not books</li>
+            </ul>
+          </div>
         </section>
-        <section id = "hobbies">
-          <p>My Hobbies</p>
-          <ul>
-            <li>Travelling</li>
-            <li>Googleing</li>
-            <li>Reading, not books</li>
-          </ul>
-          </section>
       </main>
       <footer>
         <ul className="footer-social-icons">
-          <li><a href="https://www.linkedin.com/in/shiv-kumar-chintapalli/" rel="noreferrer noopener" target="_blank"><img src={linkedin} alt="linkedin redirect"/></a></li>
-          <li><a href="https://github.com/shivakumar2008" rel="noreferrer noopener" target="_blank"><img src={github} alt="github redirect"/></a></li>
+          <li><a href="https://www.linkedin.com/in/shiv-kumar-chintapalli/" rel="noreferrer noopener" target="_blank"><img src={linkedin} alt="linkedin redirect" /></a></li>
+          <li><a href="https://github.com/shivakumar2008" rel="noreferrer noopener" target="_blank"><img src={github} alt="github redirect" /></a></li>
         </ul>
       </footer>
-    </body>
+    </div>
   );
 }
 
-function parseDuration(diff){
+function parseDuration(diff) {
   var seconds = Math.trunc(diff / 1000),
     minutes = Math.trunc(seconds / 60),
-    hours   = Math.trunc(minutes / 60),
-    days    = Math.trunc(hours / 24),
-    months  = Math.trunc(days / 30),
-    years   = Math.trunc(days / 365);
+    hours = Math.trunc(minutes / 60),
+    days = Math.trunc(hours / 24),
+    months = Math.trunc(days / 30),
+    years = Math.trunc(days / 365);
 
-    seconds %= 60;
-    minutes %= 60;
-    hours %= 24;
-    days %= 30;
-    months %= 12;
+  seconds %= 60;
+  minutes %= 60;
+  hours %= 24;
+  days %= 30;
+  months %= 12;
 
   return {
     years,

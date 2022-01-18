@@ -3,16 +3,24 @@
 }
 
 .App-body {
+  max-width: 1000px;
+  margin: auto;
   text-align: left;
 }
 
+footer {
+  display: flex;
+  padding: 20px;
+}
+
 .footer-social-icons{
-  display: inline-flex;
+  display: flex;
   list-style-type: none;
 }
 
 .footer-social-icons li {
   margin: 5px;
+  height: 100%;
 }
 
 .footer-social-icons a img{
@@ -60,7 +68,6 @@
 }
 
 section {
-  background-color: honeydew;
   display: flex;
 }
 section ul{
@@ -69,12 +76,12 @@ section ul{
 
 .main-layout-block {
   font-size: medium;
-  padding: 20px;
-  width: 50%;
-}
-
-.main-layout-block p {
-  font-size: large;
+  width: 100%;
+  margin: 5px;
+  padding : 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 3px rgb(183, 185, 189);
 }
 
 #left-up{
@@ -83,8 +90,6 @@ section ul{
 
 .right-align{
   text-align: right;
-  margin-right: 0px;
-  margin-left: auto;
 }
 
 #right-up {
@@ -105,4 +110,10 @@ section ul{
   background-color: cadetblue;
   font-family: monospace;
   font-size: medium;
+}
+
+.people-count{
+  width: 100%;
+  text-align: right;
+  align-items: center;
 }
